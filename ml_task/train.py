@@ -11,8 +11,7 @@ MODEL_PATH = "ml_task/model.joblib"
 def main():
     try:
         df = pd.read_csv("ml_task/train.csv")
-    except:
-        FileNotFoundError as e:
+    except FileNotFoundError as e:
         print(e); exit()
     pipeline = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())
     pipeline.fit(df[['6', '7']].values, df['target'].values)
