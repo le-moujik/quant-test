@@ -1,6 +1,6 @@
 from collections import deque
 
-# Another dapted solution from the Internet
+# Another adapted solution from the Internet
 # These arrays are used to get row and
 # column numbers of 8 neighbours of a given cell
 ROW_DIRECT = [-1, 0, 0, 1]
