@@ -26,11 +26,9 @@ def BFS(mat, processed, i, j):
     # enqueue their unvisited adjacent
     while q:
         x, y = q.popleft()
-        # Go through all 8 adjacent
+        # Go through all 4 adjacent
         for k in range(len(ROW_DIRECT)):
-
             if is_safe(mat, x + ROW_DIRECT[k], y + COL_DIRECT[k], processed):
-
                 processed[x + ROW_DIRECT[k]][y + COL_DIRECT[k]] = True
                 q.append((x + ROW_DIRECT[k], y + COL_DIRECT[k]))
 
